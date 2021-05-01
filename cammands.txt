@@ -1,0 +1,4 @@
+python main.py -d datasets/eccv16_dataset_summe_google_pool5.h5 -s datasets/summe_splits.json -m summe --gpu 0 --save-dir log/summe-split0 --split-id 0 --evaluate --resume /log/summe-split0/model_epoch60.pth.tar --verbose --save-results
+python visualize_results.py -p log/summe-split0/result.h5
+python parse_log.py -p log/summe-split0/log_train.txt
+python summary2video.py -p log/summe-split0/result.h5 -d video/ -i 0 --fps 30 --save-dir log --save-name summary.mp4

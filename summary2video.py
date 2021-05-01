@@ -21,7 +21,7 @@ def frm2video(frm_dir, summary, vid_writer):
         if val == 1:
             # here frame name starts with '000001.jpg'
             # change according to your need
-            frm_name = str(idx+1).zfill(6) + '.jpg'
+            frm_name = 'a ('+str(idx+1)+ ').jpg'
             frm_path = osp.join(frm_dir, frm_name)
             frm = cv2.imread(frm_path)
             print(frm)
@@ -44,3 +44,6 @@ if __name__ == '__main__':
     h5_res.close()
     frm2video(args.frm_dir, summary, vid_writer)
     vid_writer.release() 
+
+
+
